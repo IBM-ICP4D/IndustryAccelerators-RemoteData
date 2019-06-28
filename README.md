@@ -136,7 +136,7 @@ This provides a *pattern* for how to get an CP4D_IA advanced analytics model to 
    *  The source file should be sample csv data matching the format defined for the Target table 
    *  events.csv  to populate EVENTS table, full_customer_history.csv to populate FCH1
    *  *Note: you may need to have down loaded these tables to your workstation from ICPD For Data* ; 
-   *  They are available in a datasets folder as part of the project where you have imported the correspoding ICPD IA addon 
+   *  They are available in a datasets folder as part of the project where you have imported the correspoding CP4D_IA addon 
    *  The default option (in the identify source files) that the source file is NOT originating in a PureData System for Analytics will be correct unless you are using an IBM Neteeza source system
 * Click the **next**  button to at bottom right to bring up the identify target panel 
    *  Select your working schema from the list of schemas 
@@ -159,7 +159,7 @@ This provides a *pattern* for how to get an CP4D_IA advanced analytics model to 
    * When the operation completes, the  source sample data will be loaded into the target table  
    * the provided sample data has about 100,000 events to load into EVENTS and 1000 customer history records to load into FCH1
  
- <h3> Step 5: Use console and SQL to validate loaded data and setup tables for ICPD data virtualization demonstration </h3>
+ <h3> Step 5: Use console and SQL to validate loaded data and setup tables for CP4D data restructuring demonstration </h3>
  
 A simple level of validation of the loaded data into the EVENTS table can be done using the Db2 Warehouse on Cloud **EXPLORE** command.
 * in the Db2 Warehouse on Cloud console, select **EXPLORE*
@@ -199,7 +199,7 @@ The effect will be to initialize  regional tables for EVENTS or CUSTOMER HISTORI
 We will use these regional table structures to show a simple data virtualization / date regularizatio front end executing in CP4D in a Jupyter notebook in order to assemble a large training set for a AI/ML analytics models. Since we do this for both events and  customer History data, the life event prediction and customer segmentation analytics are each covered. Since Customer Churn analytics also is sourced entirely from customer history data. the same data regularization/virtualization pattern could be applied in that case also. 
 
 <h3> Step 6: Set up the CP4D connection allowing discovery and import of remote data assets </h3>
-A feature of CP4D is that  connections can be defined to access sources of data assets as remode services and data warehouses.  We next describe the detailed steps to set up an ICPD connection to the Db2 Warehouse on cloud instance we have establish in the preceding steps of this tutorial.  These steps assume that you have set up a project within ICPD, specifically the "Life Event Prediction" Industry Accelerator.
+A feature of CP4D is that  connections can be defined to access sources of data assets as remode services and data warehouses.  We next describe the detailed steps to set up an ICPD connection to the Db2 Warehouse on cloud instance we have establish in the preceding steps of this tutorial.  These steps assume that you have set up a project within CP4D, specifically the "Customer Life Event Prediction" Industry Accelerator.
 
 *  Logon to your ICPD instance and open the _"Life Event Prediction"_ project.
 *  __Add Data Source.__  From your project, select __Data Sources__ and __Add Data Source.__
@@ -218,8 +218,10 @@ There was a detailed description in Step 2 of this guide  how to display the Db2
 
 If you are connecting CP4D to some other  preexisting Data warehouse you will need to know its ipaddress, port on which it listens for connection requests, database name and valid userod and password values.  You need to enter this information into cirresponding fields in the CP4D **Add connection** panel. 
 
-With these fields completed the **Test connection**  button at the bottom right side of the ICPD **Add connection** panel will be enabled.
+With these fields completed the **Test connection**  button at the bottom right side of the CP4D  **Add connection**  panel will be enabled.
+
 Use this for CP4D to perform a level of connection validation. If this succeeds, the **Add** button is enabled. Use this to add the new connection to the list of connections available in CP4D. 
+
 ---
 
 ![fig title](add_connection.png)
