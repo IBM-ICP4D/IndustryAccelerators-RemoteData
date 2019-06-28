@@ -61,7 +61,7 @@ We follow the Db2 Warehouse provisioning, table create, and load steps from this
 * Click on  **catalog** in the top navigation bar in the main dashboard
     *  This will open a list of **All Categories** of available service in the left navigation pane 
 * Click on  **Databases**  to open a list of available database services
-   * from this list select **Db2 Warehouse** as the database service to be provisioned  
+    * from this list select **Db2 Warehouse** as the database service to be provisioned  
 * Pick the Entry plan and change the suggested service name to "sqldatabase" (you will use that name later on). Pick a location for the deployment of the database and make sure that the correct organization and space are selected.
 * Click on **Create** . After a short moment you should get a success notification.
 * After successful Db2 Warehouse on Cloud provisioning, the console will show:  CloudFoundryServices> Db2Warehouse-nn  
@@ -69,17 +69,19 @@ We follow the Db2 Warehouse provisioning, table create, and load steps from this
     * The state should show as provisioned.   
     
 <h3> Step 2:  Generate and display credentials and open the console for this Db2Warehouse on Cloud Service </h3>
+
 You will need to create and keep handy for use in several steps below credentials to access your provisioned DB2Warehouse on Cloud instance.
+
 *  If necessary logon to IBM Public Cloud  to get to the dashboard screen 
-*   From the command drop down menue in upper leftcorner,  select **services** for a panel listing the provisioned services 
+*  From the command drop down menue in upper leftcorner,  select **services** for a panel listing the provisioned services 
 *  Double click on the Db2 Warehouse on Cloud Service in the services listing.
     * this will bring up the Db2 Warehouse on Cloud main panel.
 *  In the left side of this panel select  **Manage Credentials**.
 *  If  there is is already a credential created, select it and click on display.
 *  If no credential existed previously, you can request new credential creation.
-* the information you will need to save for later use: 
-   *   userid - this will be astring typically of the form dash99999   with a nummeric suffix 
-   *   password - this is a twelve character string typically with random and special characters 
+*  The information you will need to save for later use: 
+    *   userid - this will be astring typically of the form dash99999   with a nummeric suffix 
+    *   password - this is a twelve character string typically with random and special characters 
   
 <h3> Step 3: Define and add a new table into the data warehouse </h3>
 
@@ -97,14 +99,14 @@ You will need to create and keep handy for use in several steps below credential
     *  This is the userid set up and saved from step 2 of inspecting the data warehouse credentials.
 *  Select this schema.
 
-To define a new table we will need the table name and a set of column name column type pairs. This approach can be used to load any csv data into the warehouse. The important case for working with CP4D_IA models is to show how to load the sample training data files into the models for Customer Life Event prediction and Customer Sets.  The sample training dat files are available at :
- [IA_sample-data-sets](../data-sets)  . 
+To define a new table we will need the table name and a set of column name column type pairs. This approach can be used to load any csv data into the warehouse. The important case for working with CP4D_IA models is to show how to load the sample training data files into the models for Customer Life Event prediction and Customer Sets.  The sample training data files are available at :
+ [IA_sample-data-sets](./datasets)  . 
 
 
 *  Select  **+ new table**  to start the process of defining a new table name.
 *  We can enter a new table name  this will be:
    *  EVENTS if you are setting up to source Customer Life Event Prediction with remote sample EVENT data 
-   *  FCH1 if you are setting up to source Customer Segmentation or Customer Churn analytics with remote sample full Customer History data   
+   *  FCH1 if you are setting up to source Customer Segmentation or Customer Segmentation analytics with remote sample full Customer History data   
 *  To define the table we need to specify the field names and types for each column in the table we are adding.
     * For the EVENTS sample table, the column definition texts can be  can be copied from [EVENTS definition](event-def.txt) and pasted into the field definition box in the new Table create screen.
     * For the FCH1 full customer history sample table, the column definition text can be copied from [FCH1 definition](fch-def.txt) and pasted into the field definition box in the new Table create screen.
@@ -117,10 +119,10 @@ To define a new table we will need the table name and a set of column name colum
 <h3> Step 4: Setup transform and import to load sample data into the newly created table </h3>
 The next step is to load the newly created table, either EVENTS or FCH1 ( in the Db2 warehouse on Cloud) with sample data available from a connected workstation or other source.  Here we describe the specific steps to load data from a csv sample source file:
 
-* for life event prediction  analytics, sample data source is [event.csv](../../datasets/event.csv) 
-* for customer segmentation and customer churn analytics sample data source is [full_customer_history.csv](../../datasets/customer_full_summary_latest.csv) 
+* for life event prediction  analytics, sample data source is [event.csv](./datasets/event.csv) 
+* for customer segmentation and customer churn analytics sample data source is [full_customer_history.csv](./datasets/customer_full_summary_latest.csv) 
 
-After this source data setup in steps 6 - 8 in the demo/tutorial we will describe how to discover and read from this remote data asset in CP4D and use the resulting data to train scroe and deply score AI/ ML Models CP4D.  
+After this source data setup in steps 6 - 8 in the demo/tutorial we will describe how to discover and read from this remote data asset in CP4D and use the resulting data to train and deploy a scoring service for these  AI/ ML Models in CP4D.  
 
 This provides a *pattern* for how to get an ICP for Data advanced analytics model to read and use remote data a common situation when CP4D is used to provide scalable analytics using data from an existing Enterprise Data warehouse. 
 
