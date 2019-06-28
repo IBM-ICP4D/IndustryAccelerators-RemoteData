@@ -121,12 +121,14 @@ The next step is to load the newly created table, either EVENTS or FCH1 ( in the
 
 * for life event prediction  analytics, sample data source is [event.csv](./datasets/event.csv) 
 * for customer segmentation and customer churn analytics sample data source is [full_customer_history.csv](./datasets/customer_full_summary_latest.csv) 
+These two sets data sets can be downloaded from this tutorial. If the coresponding CP4D_IA add ons have been installed, the same sample data is available in the Analytics project data directories for the IAs. Find this data by opening a CP4D console window in the Add-on projects and navigate using the file tab in the console display.  
 
-After this source data setup in steps 6 - 8 in the demo/tutorial we will describe how to discover and read from this remote data asset in CP4D and use the resulting data to train and deploy a scoring service for these  AI/ ML Models in CP4D.  
 
-This provides a *pattern* for how to get an ICP for Data advanced analytics model to read and use remote data a common situation when CP4D is used to provide scalable analytics using data from an existing Enterprise Data warehouse. 
+After this source data setup in steps 6 - 8 in the demo/tutorial we will describe how to discover and read from this remote data asset in CP4D and use the resulting data to train and deploy a scoring service for these AI/ ML Models in CP4D_IA.  
 
-<h4> Steps to load smaple data into new table </h4> 
+This provides a *pattern* for how to get an CP4D_IA advanced analytics model to read and use remote data a common situation when CP4D is used to provide scalable analytics using data from an existing Enterprise Data warehouse. 
+
+<h4> Steps to load sample data into new table </h4> 
 
 * In the Db2 Warehouse on Cloud console, from the command pulldown menu in the upper left title bar, select **LOAD**
    *  This will bring up the identify source data panel 
@@ -300,7 +302,7 @@ After  successful import of the data:
 The user can choose (or progress through) options, incrementally providing more ICPD insight – more complete “end-to-end” pattern
 by selecting one the choices below. 
 
-<h4> Execute Life events model with provided sample data </h4>
+<h4> Execute Customer Life Event Prediction model with provided sample data </h4>
 
 *  Install Life events CP4D_IA add-on projects for Customer Life Event Prediction and Customer Segmentation
     *  this will also install relate terms and glossaies into the CP4D Catalog 
