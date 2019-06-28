@@ -30,11 +30,11 @@ The benefits of organizing  the sample data import steps in this way include:
 To work with remote data sourcing for any of the CP4D Industry Accelerators you will need:
   
  * An a user account with **admin** priviledge on a provisioned CP4D instance 
-     * Since you will be discovering and importing data assets from a remote source and making them visible in the CP4D catalog to all users of the ICPD instance **admin** priviledge is required.  
+     * Since you will be discovering and importing data assets from a remote source and making them visible in the CP4D catalog to all users of the CP4D instance **admin** priviledge is required.  
  * An account on IBM Public Cloud.
-     * This can be a free IBM Cloud account if the CP4D_IA models are being used for tutorial purposes.  
+     * This can be a free IBM Cloud account if the CP4D_IA models are being used as a tutorial (ie. not production).  
      
- If you are only executing the advanced analytics examples for Customer Life Event prediction, Customer Churn and Customer Segmentation  Add-ons with locally provided csv sample training data (no data import operations), a **Data Scientist**  or **Data Engineer** role account on an ICPD instance is sufficient, since running the analytics locally makes no use of or updates to the CP4D catalog.       
+ If you are only executing the advanced analytics examples for Customer Life Event prediction, Customer Churn and Customer Segmentation  Add-ons with locally provided csv sample training data (no data import operations), a **Data Scientist**  or **Data Engineer** role account on an CP4D instance is sufficient, since running the analytics locally makes no use of or updates to the CP4D catalog.       
   
 <h2>  Overview of steps in the data import into Cloud Pak for Data process</h2>
 The sequence of steps required to set up an example data warehouse, install data and then import it into the CP4D catalog can be summarized as follows: 
@@ -44,10 +44,10 @@ Starting from an IBM Public Cloud account:
 2.   Generate and display credentials to this database and open the Db2 Warehouse console.
 3.   Add a new table into this warehouse.
 4.   Set up csv processing to upload sample data into this table.
-5.   Use SQL to validate the sample data and set up more complex partioned event tables (for simple ICPD data virtualization demonstration).
-6.   Set up the connection from ICPD allowing discovery and import of data assets from a remote data warehouse.
-7.   Request ICP for Data to discover and import assets from a remode data warehouse using a defined source data connection.
-8.   Show data read and data virtualization/regularization steps in ICP for Data jupyter notebook as the first step in advanced analytics.
+5.   Use SQL to validate the sample data and set up more complex partioned event tables (for simple CP4D data virtualization demonstration).
+6.   Set up the connection from the CP4D instance allowing discovery and import of data assets from a remote data warehouse.
+7.   Request CP4D to discover and import assets from a remode data warehouse using a defined source data connection.
+8.   Show data read and data virtualization/regularization steps in a CP4D Jupyter notebook as the first step in advanced analytics.
 
 <h2>  Db2 Warehouse on Cloud Setup and Load Sample Tables </h2>
 A useful reference for the Db2 Warehouse on Cloud provisioning and sample table creation is provided in the IBM Public Cloud tutorial:  [SQL Database for Cloud Data](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-sql-database#sql-database)
