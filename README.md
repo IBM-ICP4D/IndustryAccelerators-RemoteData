@@ -293,7 +293,7 @@ After  successful import of the data:
    *  columns from the imported tables have been automatically associated with Industry glossary terms in the ICPD catalog
    *  if the columns names of the imported tables match exactly those from the sample datasets provided in Industry Accelerator then all of the business glossary terms assigments provided with the Industry Accelerator are replicated for the imported datasets columns
   
-<h4>CLoud Pak for Data reports successful import </h4>
+<h4>Cloud Pak for Data reports successful import </h4>
   
 ![Discover-Assets-02-Finished](Discover-Assets-02-Finished.JPG)
 <br><br><br>
