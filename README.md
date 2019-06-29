@@ -62,7 +62,7 @@ To work with remote data sourcing for any of the CP4D Industry Accelerators you 
 The sequence of steps required to set up an example data warehouse, install data and then import it into the CP4D catalog can be summarized as follows: 
   
 Starting from an IBM Public Cloud account: 
-1.   Provision  Db2 Warehouse on Cloud.
+1.   Provision Db2 Warehouse on Cloud.
 2.   Generate and display credentials to this database and open the Db2 Warehouse console.
 3.   Add a new table into this warehouse.
 4.   Set up csv processing to upload sample data into this table.
@@ -71,7 +71,7 @@ Starting from an IBM Public Cloud account:
 7.   Request CP4D to discover and import assets from a remode data warehouse using a defined source data connection.
 8.   Show data read and data virtualization/regularization steps in a CP4D Jupyter notebook as the first step in advanced analytics.
 
-<h2>  Db2 Warehouse on Cloud Setup and Load Sample Tables </h2>
+<h2>  Provision Db2 Warehouse on Cloud and Load the Sample Tables </h2>
 A useful reference for the Db2 Warehouse on Cloud provisioning and sample table creation is provided in the IBM Public Cloud tutorial:  [SQL Database for Cloud Data](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-sql-database#sql-database)
  
 We follow the Db2 Warehouse provisioning, table create, and load steps from this tutorial.  After table creation and validation the tutorial goes on to install and then deploy a python application. For our purposes of getting table data and metadata loaded into CP4D, no application is needed.  CP4D is able to connect to the Db2 Warehouse on Cloud directly to discover and import assets.
