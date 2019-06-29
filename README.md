@@ -291,7 +291,7 @@ After  successful import of the data:
    *  CP4D reports successful import 
    *  imported tables from the remote schema are now visible in the CP4D catalog  
    *  columns from the imported tables have been automatically associated with Industry glossary terms in the ICPD catalog
-   *  if the columns names of the imported tables match exactly those from the sample datasets provided in Industry Accelerator then all of the business glossary terms assigments provided with the Industry Accelerator are replicated for the imported datasets columns
+   *  if the column names of the imported tables match exactly those from the sample datasets provided in Industry Accelerator then all of the business glossary terms assigments provided with the Industry Accelerator are replicated for the imported datasets columns
   
 <h4>Cloud Pak for Data reports successful import </h4>
   
@@ -299,4 +299,30 @@ After  successful import of the data:
 <br><br><br>
 
 
+<h3> Step 8: Organize the imported data for training AI/ML models </h3>
 
+This final step is to organize the imported sample training data so that is has the approprite schema for use as training data with an AI/ML analytic model in CP4D such as the CP4D_IA Customer Life Event Prediction, and Customer Segmentation. 
+
+This processing could involve:
+ *  renaming columns of the imported data to match the feature schema of the target model
+ *   combining the records from multiple imported remote tables into a single training data set as motivated by the Bank X example discussed above 
+ *   field value transformations such as changing date formats or converting currency denominated valuations to ensure that data from combined tables is consistent and matches expectation of the target model 
+ 
+ Since the regularization transformations are motivated by AI/ML model development,  it is natural and efficient to implement them in a self documenting Jupyter notebook in CP4D easily consumable by the data scientists developing the target AI/ML model.  
+ 
+ For both remote training data examples covered so far, the CP4D_IS add-ons for Customer Life Event Prediction and Customer Segmentation both include an optional Jupyter notebook in their analytics projects call 0-data_import which executes the necessary data regularization processing and ducments user steps through the process. 
+ 
+ For each project this includes:
+  *   defining data assets for the project for each imported data set which will be used as a source for training data 
+  *   associating each such data asset with a CP4D catalog entry identifying the remote source 
+  *   executing  cells in the 0-data_import notebook to apply required field transformation to each imported remote source
+  *   executing a cell  in the 0-data_import notebook to combine multiple source datasets into a single unified dataset for model training
+  *   executing a cell in the 0-data_import notebook  to write out this unified remote training dataset to a file in the CP4D project 
+  *   modifing the text of a cell in the 1-model_train to use the file with imported remote training data rather than local installed training data and execute model training steps with this change.  
+  
+Each of the above steps is decribed in more detail in the 0-data_import notebooks for Customer Life Event Prediction and Customer segmentation CP4D_IA projects. 
+
+Stepping through this process and following through by executing the steps in a 2-model_screfor each project results in an edn-to end flow where AI/Models are trained with imported remoted source data, then deployed then used in a demonstration dashboard completing the goal of the tutorial. 
+
+Since the Customer Attrition Prediction  CP4D_IA model uses the same full customer history source training data as Customer Segmentation it is possible to copy over a 0-data_import and extend that AI/ML model to all training with imported remote source data also.  
+ 
