@@ -16,7 +16,7 @@ Working through this tutorial will teach users a set of tools and techniques and
 <p>
 The architecture for sample data import and catalog is illustrated in the following figure:
  
-![fig title](LoadDataArch.PNG)
+![fig title](images/rdtFig1.png)
     
 <h3> Rationale </h3>
 The benefits of organizing  the sample data import steps in this way include: 
