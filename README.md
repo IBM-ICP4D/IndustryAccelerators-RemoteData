@@ -13,7 +13,7 @@ The guidance covers:
 Working through this tutorial will teach users a set of tools and  techniques for importing remote data, typically from existing enterprise data warehouses and operational busness systems for use in training AI/ML analytic models being developed in Cloud Pak for Data.  The tutorial explains how to use data imported from a remote source to train the AI/ML models provided as Cloud Pak for Data Industry Accelerator add-ons.  
 
 
-<h2> This tutorial describes an optional extended use case for CP4D Industry Accelerators </h2>
+<h2> Use of remote data is an optional extended use case for CP4D Industry Accelerators </h2>
 When the Industry Accelerators for Customer Life Event Prediction, Customer Attrition Prediction and Customer Segmentation are installed as Cloud Pak add-ons, self contained analytics projects are created with all resources needed to train and deploy these models. Source sample training data is made available as local csv files in the CP4D instance. Explanation of the steps required to train the models with the local source data, and subsequently deploy the trained models is available in Jupyter Notebooks in the installed analytics projects. 
 
 This tutorial provides an optional extension explaining how to connent a CP4D instance to a remote system, import data from the remote system, and organize it as training data for an AI/ML analytics model.  It describes all steps needed to feed this remote training data into the CP4D_IA Customer Life Event Prediction and Customer Segmentation AI/ML models. 
