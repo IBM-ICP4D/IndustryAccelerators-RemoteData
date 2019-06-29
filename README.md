@@ -12,9 +12,40 @@ The guidance covers:
 
 Working through this tutorial will teach users a set of tools and  techniques for importing remote data, typically from existing enterprise data warehouses and operational busness systems for use in training AI/ML analytic models being developed in Cloud Pak for Data.  The tutorial explains how to use data imported from a remote source to train the AI/ML models provided as Cloud Pak for Data Industry Accelerator add-ons.  
 
+<h2> Using CP4D_IA models with local and remote data - when to use this tutorial </h2>
+
+The user can choose (or progress through) options by selecting one of the choices below.  
+
+<h4> Execute Customer Life Event Prediction model with **local** training data </h4>
+
+*  Install Life events CP4D_IA add-on projects for Customer Life Event Prediction and Customer Segmentation and Custome Attrition
+    *  this will also install related terms and glossaries into the CP4D Catalog 
+*  Train and deploy the provided AI/ML models using the local  sample csv training data installed with the CP4D_IA add-ons. 
+
+This path works wntirely with local data, no use is made of remote data and additional steps in this tutorial. Guidance on how to train the models with local data is available in the Jupyter notebooks installed as part of the CP4D_IA add-ons.  
+
+<h4> Follow steps in this tutorial to have CP4D_IA models import their training data from a remote location </h4>
+This tutorial explains how to set up a remote repository, populate it with sample training data and have this remote data imported into a CP4D instance and used to train CP4D_IA analytic models. 
+
+The steps to do this are: 
+ *  Using an IBM public cloud account, provision a DB2 Warehouse on Cloud Instance - the "lite" version can be provisioned on demand, is free and is sufficient to run this CP4D_IA examples. 
+ *  Create sample source data tables in this Data Warehouse
+ *  read in sample source data in csv files to  populate these tables 
+ *  Set up a connection from CP4D to access this remote data 
+ *  Have CP4D discover  and import assets accessible via this connection
+ *  The  imported datasets can be automatically tagged using  industry specific terms and glossary -  and published in the CP4D catalog with the resulting tags 
+ *  Ths imported source data can be used to train and score advanced analytics models for life event prediction and Customer segmentation running in CP4D. 
+ *  An initial step of data regularization, data virtualization performed in Jupyter notebook in CP4D is a convenient way to organize incoming information to get best value out of advanced AI/ML analytics executing in CP4D. 
+ 
+The steps to set up a remote data source for CP4D advanced analytics described in the tutorial: 
+*  Establishes the pattern for users to connect CP4D models to their own preexisting ( possibly not IBM ) enterprise data warehouses.
+*  Users can add their own data into pipeline
+*  Automatic tagging of discovered data sets with Banking model terms help organize and locate datasets relevant to Industry specific categories of analytics executing in CP4D. 
+*  The tutorial documents use of remote training data with The Customer Life Event Prediction and Customer segmentation models Since the CP4D_IA Customer Attrition model uses the same same schema for training data as for Customer Segmentation, the pattern described in the tutorial canbe reused to have the Customer Attrition model working with remote data also. 
+
 <h2> Architecture and Rationale </h2>
 <p>
-The architecture for sample data import and catalog is illustrated in the following figure:
+The architecture for remote sample data import is illustrated in the following figure:
  
 ![fig title](./images/rdtFig1.png)
     
