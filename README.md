@@ -318,11 +318,11 @@ This processing could involve:
   *   executing  cells in the 0-data_import notebook to apply required field transformation to each imported remote source
   *   executing a cell  in the 0-data_import notebook to combine multiple source datasets into a single unified dataset for model training
   *   executing a cell in the 0-data_import notebook  to write out this unified remote training dataset to a file in the CP4D project 
-  *   modifing the text of a cell in the 1-model_train to use the file with imported remote training data rather than local installed training data and execute model training steps with this change.  
+  *   modifing the text of a cell in the 1-model_train to use the file with imported remote training data rather than the local installed training data file and execute model training steps with this change.  
   
-Each of the above steps is decribed in more detail in the 0-data_import notebooks for Customer Life Event Prediction and Customer segmentation CP4D_IA projects. 
+Each of the above steps is decribed in more detail in the 0-data_import notebooks for Customer Life Event Prediction and Customer Segmentation CP4D_IA projects. 
 
-Stepping through this process and following through by executing the steps in a 2-model_screfor each project results in an edn-to end flow where AI/Models are trained with imported remoted source data, then deployed then used in a demonstration dashboard completing the goal of the tutorial. 
+Stepping through this process and following through by executing the steps in a 2-model_screfor each project results in an end-to-end flow where AI/Models are trained with imported remoted source data, then deployed then used in a demonstration dashboard completing the goal of the tutorial. 
 
 Since the Customer Attrition Prediction  CP4D_IA model uses the same full customer history source training data as Customer Segmentation it is possible to copy over a 0-data_import and extend that AI/ML model to all training with imported remote source data also.  
  
