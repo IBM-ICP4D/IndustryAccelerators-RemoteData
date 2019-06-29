@@ -191,12 +191,13 @@ The regions are:
 * US WEST 
 * US EAST 
 * EUROPE
-Tables EVENTS_USW, EVENTS_USE,EVENTS_EUR are created for regional EVENTS, and similarly FCH_USW, FCH_USE<FCH_EUR created for customer histories. In either case, the Customer_ID is do=sorted into a particular region and all record for that customer copied into the appropriate regional table 
+
+Tables EVENTS_USW, EVENTS_USE,EVENTS_EUR are created for regional EVENTS, and similarly FCH_USW, FCH_USE<FCH_EUR created for customer histories. In either case, the Customer_ID is do=sorted into a particular region and all records for that customer copied into the appropriate regional table 
 
 These SQL script files can be copied and pasted into the scratchpad aread of the **Run SQL** panel, selected and executed.
-The effect will be to initialize  regional tables for EVENTS or CUSTOMER HISTORIES. This represent a typical situation in a remote source data warehouse, with data organized to match operational business needs of different organizations in the enterprise. 
+The effect will be to initialize  regional tables for EVENTS or CUSTOMER HISTORIES. This represents a typical situation in a remote source data warehouse, with data organized to match operational business needs of different organizations in the enterprise. 
 
-We will use these regional table structures to show a simple data virtualization / date regularizatio front end executing in CP4D in a Jupyter notebook in order to assemble a large training set for a AI/ML analytics models. Since we do this for both events and  customer History data, the life event prediction and customer segmentation analytics are each covered. Since Customer Churn analytics also is sourced entirely from customer history data. the same data regularization/virtualization pattern could be applied in that case also. 
+We will use these regional table structures to show a simple data virtualization / date regularization front end executing in CP4D in a Jupyter notebook in order to assemble a large training set for a AI/ML analytics models. Since we do this for both events and  customer History data, the life event prediction and customer segmentation analytics are each covered. Since Customer Attrition analytics also is sourced entirely from customer history data, the same data regularization/virtualization pattern could be applied in that case also by copying over the 1-load-data Jupyter notebook from the Customer Segmentation add-on project into the Customer Attrition add-on project.  
 
 <h3> Step 6: Set up the CP4D connection allowing discovery and import of remote data assets </h3>
 A feature of CP4D is that  connections can be defined to access sources of data assets as remode services and data warehouses.  We next describe the detailed steps to set up an ICPD connection to the Db2 Warehouse on cloud instance we have establish in the preceding steps of this tutorial.  These steps assume that you have set up a project within CP4D, specifically the "Customer Life Event Prediction" Industry Accelerator.
