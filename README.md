@@ -34,7 +34,7 @@ To work with remote data sourcing for any of the CP4D Industry Accelerators you 
  * An account on IBM Public Cloud.
      * This can be a free IBM Cloud account if the CP4D_IA models are being used as a tutorial (ie. not production).  
      
- If you are only executing the advanced analytics examples for Customer Life Event prediction, Customer Churn and Customer Segmentation  Add-ons with locally provided csv sample training data (no data import operations), a **Data Scientist**  or **Data Engineer** role account on an CP4D instance is sufficient, since running the analytics locally makes no use of or updates to the CP4D catalog.       
+ If you are only executing the advanced analytics examples for Customer Life Event prediction, Customer Attrition and Customer Segmentation add-ons with locally provided csv sample training data (no data import operations), a **Data Scientist**  or **Data Engineer** role account on an CP4D instance is sufficient, since running the analytics locally makes no use of or updates to the CP4D catalog.       
   
 <h2>  Overview of steps in the data import into Cloud Pak for Data process</h2>
 The sequence of steps required to set up an example data warehouse, install data and then import it into the CP4D catalog can be summarized as follows: 
