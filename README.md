@@ -120,9 +120,8 @@ To define a new table we will need the table name and a set of column name colum
 The next step is to load the newly created table, either EVENTS or FCH1 ( in the Db2 warehouse on Cloud) with sample data available from a connected workstation or other source.  Here we describe the specific steps to load data from a csv sample source file:
 
 * for life event prediction  analytics, sample data source is [event.csv](./datasets/event.csv) 
-* for customer segmentation and customer churn analytics sample data source is [full_customer_history.csv](./datasets/customer_full_summary_latest.csv) 
+* for customer segmentation and customer segmentation analytics, sample data source is [full_customer_history.csv](./datasets/customer_full_summary_latest.csv) 
 These two sets data sets can be downloaded from this tutorial. If the coresponding CP4D_IA add ons have been installed, the same sample data is available in the Analytics project data directories for the IAs. Find this data by opening a CP4D console window in the Add-on projects and navigate using the file tab in the console display.  
-
 
 After this source data setup in steps 6 - 8 in the demo/tutorial we will describe how to discover and read from this remote data asset in CP4D and use the resulting data to train and deploy a scoring service for these AI/ ML Models in CP4D_IA.  
 
@@ -132,7 +131,7 @@ This provides a *pattern* for how to get an CP4D_IA advanced analytics model to 
 
 * In the Db2 Warehouse on Cloud console, from the command pulldown menu in the upper left title bar, select **LOAD**
    *  This will bring up the identify source data panel 
-*  The **browse files** option alloww selection of the data source from file in the workstation connected to the DB2 Warehouse on Cloud console 
+*  The **browse files** option allows selection of the data source from file in the workstation connected to the DB2 Warehouse on Cloud console 
    *  The source file should be sample csv data matching the format defined for the Target table 
    *  events.csv  to populate EVENTS table, full_customer_history.csv to populate FCH1
    *  *Note: you may need to have down loaded these tables to your workstation from ICPD For Data* ; 
@@ -143,7 +142,7 @@ This provides a *pattern* for how to get an CP4D_IA advanced analytics model to 
    *  This is likely to be a userid schema for your username into the Db2Woc instance of the form DASH999999
 *  Select the target table name - in this case we want to load sample data into:
    *  an EVENTS table for the LIfe event Prediction analytics
-   *  an FCH1 table if you are setting up remote data for the Customer Churn or Customer Segmentation analytics 
+   *  an FCH1 table if you are setting up remote data for the Customer Segmentation analytics 
    *  The column definitions for that table will be displayed 
 * Click the **Next** button to bring up the transforms definition panel 
    *  This panel provides opportunities to correct any issues with csv formats in importing fields into the taget EVENTS table 
