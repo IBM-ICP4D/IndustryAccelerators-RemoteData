@@ -184,7 +184,7 @@ Next we describe how to use this RUN SQL capability to automate setting up a  mo
 
 The motivating context for this is illustrated in the diagram below. 
 
-![fig title](DataRegnFe.PNG)
+![fig title](./images/rdtFig2.png)
 The files [bankXeventsSQL.txt](bankXeventsSQL.txt)  is an SQL script to set up "Regional" EVENTS tables and partition the data in the single initial EVENTS table across these by allocating each customer id to a specific region.  Similarly the SQL script file [bankXCustHistSQL.txt](bankXCustHistSQL.txt) creats regional full Customer History tables and populates them with data from the base FCH1 table.
 
 The regions are:
