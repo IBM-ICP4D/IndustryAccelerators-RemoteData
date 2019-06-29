@@ -185,14 +185,14 @@ Next we describe how to use this RUN SQL capability to automate setting up a  mo
 The motivating context for this is illustrated in the diagram below. 
 
 ![fig title](./images/rdtFig2.png)
-The files [bankXeventsSQL.txt](bankXeventsSQL.txt)  is an SQL script to set up "Regional" EVENTS tables and partition the data in the single initial EVENTS table across these by allocating each customer id to a specific region.  Similarly the SQL script file [bankXCustHistSQL.txt](bankXCustHistSQL.txt) creats regional full Customer History tables and populates them with data from the base FCH1 table.
+The file [bankXeventsSQL.txt](bankXeventsSQL.txt)  is an SQL script to set up "Regional" EVENTS tables and partition the data in the single initial EVENTS table across these by allocating each customer id to a specific region.  Similarly the SQL script file [bankXCustHistSQL.txt](bankXCustHistSQL.txt) creats regional full Customer History tables and populates them with data from the base FCH1 table.
 
 The regions are:
 * US WEST 
 * US EAST 
 * EUROPE
 
-Tables EVENTS_USW, EVENTS_USE,EVENTS_EUR are created for regional EVENTS, and similarly FCH_USW, FCH_USE<FCH_EUR created for customer histories. In either case, the Customer_ID is do=sorted into a particular region and all records for that customer copied into the appropriate regional table 
+Tables EVENTS_USW, EVENTS_USE,EVENTS_EUR are created for regional EVENTS, and similarly FCH_USW, FCH_USE<FCH_EUR created for customer histories. In both cases, each Customer_ID is assigned to a particular region and all records for that customer copied into the appropriate regional table 
 
 These SQL script files can be copied and pasted into the scratchpad aread of the **Run SQL** panel, selected and executed.
 The effect will be to initialize  regional tables for EVENTS or CUSTOMER HISTORIES. This represents a typical situation in a remote source data warehouse, with data organized to match operational business needs of different organizations in the enterprise. 
@@ -257,7 +257,7 @@ Additional options are available for selection to govern what processing is perf
 *   Assign business terms 
 *   Analyze data quality 
 
-Make sue both the **Assign business terms** and the **Analyze data quality** tasks are selected.  
+Make sure both the **Assign business terms** and the **Analyze data quality** tasks are selected.  
   
 ![Discover-Assets-01-Options](Discover-Assets-01-Options.JPG)
   
