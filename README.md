@@ -13,10 +13,10 @@ The guidance covers:
 Working through this tutorial will teach users a set of tools and  techniques for importing remote data, typically from existing enterprise data warehouses and operational busness systems for use in training AI/ML analytic models being developed in Cloud Pak for Data.  The tutorial explains how to use data imported from a remote source to train the AI/ML models provided as Cloud Pak for Data Industry Accelerator add-ons.  
 
 
-<h2> This tutorial is an **optional** extension of the AI/ML modelling provided as CP4D Industry Accelerators </h2>
+<h2> This tutorial describes an optional extended use case for CP4D Industry Accelerators </h2>
 When the Industry Accelerators for Customer Life Event Prediction, Customer Attrition Prediction and Customer Segmentation are installed as Cloud Pak add-ons, self contained analytics projects are created with all resources needed to train and deploy these models. Source sample training data is made available as local csv files in the CP4D instance. Explanation of the steps required to train the models with the local source data, and subsequently deploy the trained models is available in Jupyter Notebooks in the installed analytics projects. 
 
-This tutorial provides an optional extension explaining how to connent a CP4D instance to a remote system, import data from the remote system, and organize it as training data for an AI/ML analytics model.  It dewcribes all the steps to feed this remote training data into the CP4D_IA Customer Life Event Prediction and Customer Segmentation AI/ML models. 
+This tutorial provides an optional extension explaining how to connent a CP4D instance to a remote system, import data from the remote system, and organize it as training data for an AI/ML analytics model.  It describes all steps needed to feed this remote training data into the CP4D_IA Customer Life Event Prediction and Customer Segmentation AI/ML models. 
 
 The end-to-end steps to accomplish this: 
  *  Using an IBM public cloud account, provision a DB2 Warehouse on Cloud Instance - the "lite" version can be provisioned on demand, is free and is sufficient to run this CP4D_IA examples. 
@@ -25,14 +25,14 @@ The end-to-end steps to accomplish this:
  *  Set up a connection from CP4D to access this remote data 
  *  Have CP4D discover  and import assets accessible via this connection
  *  The  imported datasets can be automatically tagged using  industry specific terms and glossary -  and published in the CP4D catalog with the resulting tags 
- *  Ths imported source data can be used to train and score advanced analytics models for life event prediction and Customer segmentation running in CP4D. 
+ *  The imported source data can be used to train and score advanced analytics models for life event prediction and Customer segmentation running in CP4D. 
  *  An initial step of data regularization, data virtualization performed in Jupyter notebook in CP4D is a convenient way to organize incoming information to get best value out of advanced AI/ML analytics executing in CP4D. 
  
 The steps described in this tutorial have the additional benefit:  
 *  They show how AI/ML models in CP4D can be connected to any preexisting enterprise data warehouses.
 *  Users can add their own data into data training pipeline
 *  Automatic tagging of discovered data sets with Banking model terms help organize and locate datasets relevant to Industry specific categories of analytics executing in CP4D. 
-*  The tutorial documents use of remote training data with the Customer Life Event Prediction and Customer segmentation models Since the CP4D_IA Customer Attrition model uses the same same schema for training data as for Customer Segmentation, the pattern described in the tutorial can be reused to have the CP4D_IA Customer Attrition model also working with remote training data. 
+*  Use of remote training data with the Customer Life Event Prediction and Customer segmentation models is fully described in the tutorial.  The approach with minor changes can enable the CP4D_IA Customer Attrition model to be used with remote data also. 
 
 <h2> Architecture and Rationale </h2>
 <p>
@@ -320,31 +320,3 @@ After  successful import of the data:
 ![Discover-Assets-05-Column-Assigned-Terms-Example-B.JPG](Discover-Assets-05-Column-Assigned-Terms-Example-B.JPG)
 <br><br><br>
 
-
-<h2> Introduction: User options within this tutorial </h2>
-
-The user can choose (or progress through) options, incrementally providing more ICPD insight – more complete “end-to-end” pattern
-by selecting one the choices below. 
-
-<h4> Execute Customer Life Event Prediction model with provided sample data </h4>
-
-*  Install Life events CP4D_IA add-on projects for Customer Life Event Prediction and Customer Segmentation
-    *  this will also install relate terms and glossaies into the CP4D Catalog 
-*  Execute model using provided sample csv data in project ; view dashboards
-
-<h4> Follow tutorial steps to set up a remote repository sample source data importe and used by ICPD analytics </h4>
-
- *  Using an IBM public cloud account, provision a DB2 Warehouse on Cloud Instance - the "lite" version can be provisioned on demand, is free ad is sufficient to run this CP4D_IA examples. 
- *  Create sample source data tables in this Data Warehouse
- *  read in sample source data in csv files to  populate these tables 
- *  Set up a connection from CP4D to access this remote data 
- *  Have CP4D discover  and import assets accessible via this connection
- *  The  imported datasets can be automatically tagged using  industry specific terms and glossary -  and published in the CP4D catalog with the resulting tags 
- *  Ths imported source data can be used to train and score advanced analytics modes for life event prediction, Customer segmentation and customer shurn running in CP4D. 
- *  An initial step of data regularization, data virtualization performed in Jupyter notebook in CP4D is a convenient way to organize incoming information to get best value out of advanced AI/ML analytics executing in CP4D. 
- 
-This second option - setting up a remote data source for the remote CP4D advanced analytics: 
-*  Clearly establishes the pattern for user to connect CP4D models to their own preexisting ( possibly not IBM ) enterprise data warehouses.
-*  User can add their own data into pipeline
-*  Automatic tagging of discovered data sets with Banking model terms help organize and locate datasets relevant to Industry specific ctegories of analytics executing in CP4D. 
-*  Since The CP4D_IA for Customer Attrition uses the same same schema for training data as CP4D_IA for Customer Segmentation, the interested user can set up data import and a Jupyter notebook for reorganizing anf feeding remote sampe training data into that analytic mode aslo patterned on the data reorganizatin notebook provided with the Customer Segmentation Industry Accelerator add-on.
