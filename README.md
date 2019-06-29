@@ -238,7 +238,7 @@ There was a detailed description in Step 2 of this guide  how to display the Db2
 *  The credential includes a "*username*" field with a value of the form "dash99999"; copy and paste this into the *usename* field in ICPD **Add connection** panel. 
 *  It also includes  a "*password*" field whose value will be a string; this should be copied and pasted into the corresponding ICPD **Add connection** field 
 
-If you are connecting CP4D to some other  preexisting Data warehouse you will need to know its ipaddress, port on which it listens for connection requests, database name and valid userod and password values.  You need to enter this information into cirresponding fields in the CP4D **Add connection** panel. 
+If you are connecting CP4D to some other  preexisting Data warehouse you will need to know its ipaddress, port on which it listens for connection requests, database name and valid userod and password values.  You need to enter this information into corresponding fields in the CP4D **Add connection** panel. 
 
 With these fields completed the **Test connection**  button at the bottom right side of the CP4D  **Add connection**  panel will be enabled.
 
@@ -298,25 +298,5 @@ After  successful import of the data:
 ![Discover-Assets-02-Finished](Discover-Assets-02-Finished.JPG)
 <br><br><br>
 
-<h4>Details of the asset discovery results </h4>
-  
-![Discover-Assets-03-Results-Publish](Discover-Assets-03-Results-Publish.JPG)
-<br><br><br>
 
-<h4>Review of the suggested terms with option to assign additional terms </h4>
-  
-![Discover-Assets-03b-Results-Review](Discover-Assets-03b-Results-Review.JPG)
-<br><br><br>
-
-<h4>Confirm publishing of selected dataset information and term assignments into Catalog </h4>
-  
-![Discover-Assets-04-Publish-Confirm](Discover-Assets-04-Publish-Confirm.JPG)
-<br><br><br>
-
-<h4>Examples of the column to term assignment in Catalog </h4>
-  
-![Discover-Assets-05-Column-Assigned-Terms-Example-A](Discover-Assets-05-Column-Assigned-Terms-Example-A.JPG)
-<br>
-![Discover-Assets-05-Column-Assigned-Terms-Example-B.JPG](Discover-Assets-05-Column-Assigned-Terms-Example-B.JPG)
-<br><br><br>
 
